@@ -1,0 +1,50 @@
+$de-blue: #5a9ad4;
+$de-blue-dark: #487ba9;
+$de-blue-light: #deeaf6;
+$de-grey: #D3D3D3;
+$de-light-grey: #e4e4e4;
+
+.collection-container {
+	padding: 2%;
+}
+
+.collection-container div div hr {
+	margin: 0.8rem auto;
+}
+
+.is-accordion-submenu-parent {
+  width: 100%;
+}
+
+p.no-products {
+
+}
+
+ul.products.columns-4 {
+  margin: 0;
+  max-width: none;
+}
+
+#active-filters {
+  font-size: 0.8rem;
+  color: darkgray;
+}
+
+.filter-option-any {
+  color: darkgray;
+}
+
+.tabs-title {
+  margin: 0 auto;
+}
+
+.tabs-button {
+  padding: 1.4rem 0.5rem !important;
+}
+
+select.ajax-filter-select.small-width {
+  @include breakpoint(medium){
+    width: 150px;
+  }
+}
+
