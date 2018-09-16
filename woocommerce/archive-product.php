@@ -192,7 +192,7 @@
                             $product_query->the_post();
                             $product = wc_get_product(get_post(get_the_ID(), OBJECT));?>
 
-                            <div class="columns large-3 medium-4 small-12 collection-container" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-offset="-1000">
+                            <div class="columns large-4 medium-6 small-12 collection-container" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-offset="-1000">
                                 <div class="row">
 
                                     <div class="columns small-12">

@@ -33,10 +33,10 @@
                         <li class="has-submenu show-for-large">
                             <a class="button">Products</a>
                             <ul class="submenu menu vertical" data-submenu>
-                                <li><a class="button" href="/about/frames">Frames</a></li>
-                                <li><a class="button" href="/about/lenses">Lenses</a></li>
-                                <li><a class="button" href="/about/optometry">Optometry</a></li>
-                                <li><a class="button" href="/about/sunglasses">Sunglasses</a></li>
+                                <li><a class="button" href="/frames">Frames</a></li>
+                                <li><a class="button" href="/lenses">Lenses</a></li>
+                                <li><a class="button" href="/optometry">Optometry</a></li>
+                                <li><a class="button" href="/sunglasses">Sunglasses</a></li>
                             </ul>
                         </li>
                         <li class="show-for-large">
