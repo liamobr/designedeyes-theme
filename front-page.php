@@ -27,15 +27,27 @@
 
 <div class="main-content">
     <div class="row">
+        <?php
+        if(have_posts()):
+            while(have_posts()) : the_post();
+                the_content();
+            endwhile;
+        endif;
+        ?>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="row">
         <div class="row columns small-12 align-center">
             <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-offset="300">
                 <div class="row" data-equalizer>
-                    <div class="columns small-12 medium-6" data-equalizer-watch>
+                    <div class="columns small-12 medium-5" data-equalizer-watch>
                         <div class="service-image">
                             <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/frames.png" alt="">
                         </div>
                     </div>
-                    <div class="columns small-12 medium-6" data-equalizer-watch>
+                    <div class="columns small-12 medium-7" data-equalizer-watch>
                         <div class="service-container">
                             <h4><b>Frames</b></h4><br>
                             Blah blah blah here is some text that will describe frames or something.<br><br>
@@ -48,12 +60,12 @@
         <div class="row columns small-12 align-center">
             <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                 <div class="row" data-equalizer>
-                    <div class="columns small-12 medium-6" data-equalizer-watch>
+                    <div class="columns small-12 medium-5" data-equalizer-watch>
                         <div class="service-image">
                             <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/optometry.png" alt="">
                         </div>
                     </div>
-                    <div class="columns small-12 medium-6" data-equalizer-watch>
+                    <div class="columns small-12 medium-7" data-equalizer-watch>
                         <div class="service-container">
                             <h4><b>Optometry</b></h4><br>
                             Blah blah blah here is some text that will describe optometry or something.<br><br>
@@ -66,12 +78,12 @@
         <div class="row columns small-12 align-center">
             <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                 <div class="row" data-equalizer>
-                    <div class="columns small-12 medium-6" data-equalizer-watch>
+                    <div class="columns small-12 medium-5" data-equalizer-watch>
                         <div class="service-image">
                             <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/lenses.png" alt="">
                         </div>
                     </div>
-                    <div class="columns small-12 medium-6" data-equalizer-watch>
+                    <div class="columns small-12 medium-7" data-equalizer-watch>
                         <div class="service-container">
                             <h4><b>Lenses</b></h4><br>
                             Blah blah blah here is some text that will describe lenses or something.<br><br>
@@ -81,18 +93,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="main-content">
-    <div class="row">
-	    <?php
-	    if(have_posts()):
-		    while(have_posts()) : the_post();
-			    the_content();
-		    endwhile;
-	    endif;
-	    ?>
     </div>
 </div>
 

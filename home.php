@@ -17,24 +17,18 @@
 
             <?php
             if(have_posts()):
-                while(have_posts()) : the_post();
-
-                $content_array = get_extended(get_the_content('Read more...'))?>
-
+                while(have_posts()) : the_post(); ?>
 
                     <div class="row title">
-                        <div class="columns small-6 small-offset-1">
+                        <div class="columns small-12 small-offset-1">
                             <header>
                                 <a class="black-text" href="<?php the_permalink(); ?>"><h3 class="blog-title"><?php the_title(); ?></h3></a>
                             </header>
                         </div>
-                        <div class="columns small-5 center-children-vertical align-right">
-                            <?php the_date(); ?>
-                        </div>
                     </div>
 
-                    <?php echo $content_array['main']; ?>
-
+                    <?php the_content('Read more...'); ?>
+                    <hr>
                 <?php endwhile;
             endif; ?>
             <div>

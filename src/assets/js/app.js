@@ -30,7 +30,7 @@ $(document).ready(function () {
         let form_data = $("#ajax-filter-form").serializeArray();
 
        //Deselects all options if 'any' is selected.
-       if(form_data[0].value == ""){ //'Any' is always first object in array.
+       if(form_data[0].value === ""){ //'Any' is always first object in array.
            $(this).find("option").prop("selected", false);
        }
 
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
        for(let i = 0; i < form_data.length; i++){
            let name = form_data[i].name;
-           if(temp_name == name){
+           if(temp_name === name){
                data[name].push(form_data[i].value);
            } else {
                temp_name = name;
@@ -48,7 +48,6 @@ $(document).ready(function () {
        }
 
        data.action = 'product_filter';
-       var ajaxurl = "/../wp-admin/admin-ajax.php";
 
        $.ajax({
            url: ajaxurl,

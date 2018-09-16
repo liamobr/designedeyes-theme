@@ -59,6 +59,26 @@ p {
 
 //Utility Classes Start
 
+img.alignright {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+img.alignleft {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
 .center-children-horizontal {
 	padding-left: auto;
 	padding-right: auto ;
@@ -188,6 +208,10 @@ div.banner-feature-image.small {
 .service-image {
 	margin: 0 auto;
 
+	@include breakpoint(medium) {
+		max-width: 30vw;
+	}
+
 	@include breakpoint(small) {
 		max-width: 70vw;
 	}
@@ -272,8 +296,7 @@ h3.title {
 }
 
 .more-link {
-	display: inline-block;
-	margin: 2% 0.5vw;
+	display: block;
 }
 
 .iframe-wrapper {
@@ -281,8 +304,7 @@ h3.title {
 	position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px auto;
 }
 
 .iframe {
