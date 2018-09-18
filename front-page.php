@@ -39,60 +39,42 @@
 
 <div class="main-content">
     <div class="row">
-        <div class="row columns small-12 align-center">
-            <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-offset="300">
-                <div class="row" data-equalizer>
-                    <div class="columns small-12 medium-5" data-equalizer-watch>
-                        <div class="service-image">
-                            <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/frames.png" alt="">
-                        </div>
-                    </div>
-                    <div class="columns small-12 medium-7" data-equalizer-watch>
-                        <div class="service-container">
-                            <h4><b>Frames</b></h4><br>
-                            Blah blah blah here is some text that will describe frames or something.<br><br>
-                            <a class="button" href="/about/frames"><i class="fas fa-mouse-pointer"></i> Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row columns small-12 align-center">
-            <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
-                <div class="row" data-equalizer>
-                    <div class="columns small-12 medium-5" data-equalizer-watch>
-                        <div class="service-image">
-                            <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/optometry.png" alt="">
-                        </div>
-                    </div>
-                    <div class="columns small-12 medium-7" data-equalizer-watch>
-                        <div class="service-container">
-                            <h4><b>Optometry</b></h4><br>
-                            Blah blah blah here is some text that will describe optometry or something.<br><br>
-                            <a class="button" href="/about/optometry"><i class="fas fa-mouse-pointer"></i> Read more</a>
+        <?php
+        if(have_rows('services')){
+            while(have_rows('services')){
+                the_row();
+
+                $service_image = get_sub_field('service_image')['url'];
+                $service_title = get_sub_field('service_title');
+                $service_link = get_sub_field('service_link');
+                $service_description = get_sub_field('service_description');
+
+                ?>
+
+                <div class="row columns small-12 align-center">
+                    <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-offset="300">
+                        <div class="row" data-equalizer>
+                            <div class="columns small-12 medium-5" data-equalizer-watch>
+                                <div class="service-image">
+                                    <img src="<?= $service_image ?>" alt="">
+                                </div>
+                            </div>
+                            <div class="columns small-12 medium-7" data-equalizer-watch>
+                                <div class="service-container">
+                                    <h4><b><?= $service_title ?></b></h4><br>
+                                    <p><?= $service_description ?></p><br><br>
+                                    <a class="button" href="<?= $service_link ?>"><i class="fas fa-mouse-pointer"></i> Read more</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row columns small-12 align-center">
-            <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
-                <div class="row" data-equalizer>
-                    <div class="columns small-12 medium-5" data-equalizer-watch>
-                        <div class="service-image">
-                            <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/lenses.png" alt="">
-                        </div>
-                    </div>
-                    <div class="columns small-12 medium-7" data-equalizer-watch>
-                        <div class="service-container">
-                            <h4><b>Lenses</b></h4><br>
-                            Blah blah blah here is some text that will describe lenses or something.<br><br>
-                            <a class="button" href="/about/lenses"><i class="fas fa-mouse-pointer"></i> Read more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+                <?php
+            }
+        }
+        ?>
+
     </div>
 </div>
 
