@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-Test
+
 <div class="main-content">
     <div class="row">
         <?php
