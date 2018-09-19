@@ -202,7 +202,7 @@
                                         <hr class="show-for-medium">
                                     </div>
 
-                                    <div class="columns small-6">
+                                    <div class="columns small-12">
                                         <a class="black-text" href="/product/<?php echo $product->get_slug(); ?>"><?php echo $product->get_short_description(); ?></a>
                                     </div>
 

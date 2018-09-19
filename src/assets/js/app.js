@@ -78,14 +78,20 @@ $(document).ready(function () {
 
                if(filters !== ""){
                    filters = filters.slice(0, -2);
-                   $("#active-filters").text("Showing up to " + products.query.posts_per_page + "  results for: " + filters);
-               } else {
-                   let posts_per_page = '';
 
-                   if(products.query.posts_per_page === '1000'){
+                   let posts_per_page = products.query.posts_per_page;
+
+                   if(posts_per_page === '1000'){
+                       $("#active-filters").text("Showing all results for: " + filters);
+                   } else{
+                       $("#active-filters").text("Showing up to " + posts_per_page + " results for: " + filters);
+                   }
+               } else {
+                   let posts_per_page = products.query.posts_per_page;
+
+                   if(posts_per_page === '1000'){
                        $("#active-filters").text("Showing all results");
                    } else{
-                       posts_per_page = products.query.posts_per_page;
                        $("#active-filters").text("Showing up to " + posts_per_page + " results");
                    }
                }
