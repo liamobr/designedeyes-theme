@@ -61,8 +61,6 @@
     </div>
 </footer>
 
-<script src="<?php bloginfo('template_directory'); ?>/dist/assets/js/aos.js" alt="Designed Eyes"></script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
