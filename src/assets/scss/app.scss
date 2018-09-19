@@ -188,6 +188,8 @@ div.banner-feature-image.small {
 
 .service-container {
 
+	width: 100%;
+
 	@include breakpoint(medium up){
 		position: absolute;
 		top: 50%;
@@ -198,6 +200,10 @@ div.banner-feature-image.small {
 
 .service-panel .row .columns {
 	padding: 2vw;
+}
+
+.service-panel div div {
+	position: relative;
 }
 
 .service-image {
