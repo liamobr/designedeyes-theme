@@ -18,8 +18,8 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-        <header class="header-wrapper">
-            <div class="top-bar" id="responsive-menu" data-sticky data-margin-top="0">
+        <header class="header-wrapper" data-sticky-container>
+            <div class="top-bar" id="responsive-menu" data-sticky data-sticky-on="small" data-options="marginTop:0;" style="width:100%">
                 <div class="top-bar-left">
                     <ul class="dropdown menu" data-dropdown-menu>
                         <li class="menu-image">

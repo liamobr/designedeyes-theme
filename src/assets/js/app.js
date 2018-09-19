@@ -56,7 +56,7 @@ $(document).ready(function () {
            data: data,
            cache: false,
            timeout: 30000,
-           async: true,
+           async: false,
            headers: {
                "cache-control": "no-cache"
            },
