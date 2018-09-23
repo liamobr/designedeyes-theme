@@ -62,7 +62,7 @@
                             <div class="columns small-12 medium-7" data-equalizer-watch>
                                 <div class="service-container">
                                     <h4><b><?= $service_title ?></b></h4><br>
-                                    <p><?= $service_description ?></p><br><br>
+                                    <p><?= $service_description ?></p><br>
                                     <a class="button" href="<?= $service_link ?>"><i class="fas fa-mouse-pointer"></i> Read more</a>
                                 </div>
                             </div>
