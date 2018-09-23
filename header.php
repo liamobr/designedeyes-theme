@@ -21,37 +21,22 @@
         <header class="header-wrapper" data-sticky-container>
             <div class="top-bar" id="responsive-menu" data-sticky data-sticky-on="small" data-options="marginTop:0;" style="width:100%">
                 <div class="top-bar-left">
-                    <ul class="dropdown menu" data-dropdown-menu>
-                        <li class="menu-image">
-                            <a href="<?php echo home_url(); ?>" title="Home">
-                                <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/logo/name.png" alt="">
-                            </a>
-                        </li>
-                        <li class="show-for-large">
-                            <a href="<?php echo home_url(); ?>" class="button"><span class="fas fa-home"></span> Home</a>
-                        </li>
-                        <li class="has-submenu show-for-large">
-                            <a class="button">Products</a>
-                            <ul class="submenu menu vertical" data-submenu>
-                                <li><a class="button" href="/frames">Frames</a></li>
-                                <li><a class="button" href="/lenses">Lenses</a></li>
-                                <li><a class="button" href="/optometry">Optometry</a></li>
-                                <li><a class="button" href="/sunglasses">Sunglasses</a></li>
-                            </ul>
-                        </li>
-                        <li class="show-for-large">
-                            <a href="/about" class="button">About Us</a>
-                        </li>
-                        <li class="show-for-large">
-                            <a href="/contact" class="button">Contact</a>
-                        </li>
-                        <li class="show-for-large">
-                            <a href="/blog" class="button">Blog</a>
-                        </li>
-                        <li class="show-for-large">
-                            <a href="/collection" class="button">Collection</a>
-                        </li>
-                    </ul>
+                    <div class="nav-logo">
+                        <a href="<?php echo home_url(); ?>" title="Home">
+                            <img src="<?php bloginfo('template_directory'); ?>/dist/assets/images/logo/name.png" alt="">
+                        </a>
+                    </div>
+	                <?php
+	                $parent_ul = '<ul class="dropdown menu show-for-medium" data-dropdown-menu>%3$s</ul>';
+
+	                $nav_args = array(
+		                'theme_location' => 'header-menu',
+		                'items_wrap' => $parent_ul,
+		                'container' => '',
+		                'item_spacing' => 'discard'
+	                );
+
+	                wp_nav_menu($nav_args); ?>
                 </div>
                 <div class="top-bar-right">
                     <div class="hide-for-large">
@@ -63,34 +48,45 @@
 
         <div class="off-canvas-wrapper">
             <div id="mobile-menu" class="off-canvas position-right" data-off-canvas>
-                <ul class="menu vertical accordion-menu" data-accordion-menu>
-                    <li>
-                        <a aria-label="Close menu" class="button" data-close><em>Back</em></a>
-                    </li>
-                    <li>
-                        <a href="<?php echo home_url(); ?>" class="button"><span class="fas fa-home"></span> Home</a>
-                    </li>
-                    <li>
-                        <a class="button">Products</a>
-                        <ul class="menu vertical nested">
-                            <li><a class="button" href="/about/frames">Frames</a></li>
-                            <li><a class="button" href="/about/lenses">Lenses</a></li>
-                            <li><a class="button" href="/about/optometry">Optometry</a></li>
-                            <li><a class="button" href="/about/sunglasses">Sunglasses</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/about" class="button">About Us</a>
-                    </li>
-                    <li>
-                        <a href="/contact" class="button">Contact</a>
-                    </li>
-                    <li>
-                        <a href="/blog" class="button">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/collection" class="button">Collection</a>
-                    </li>
-                </ul>
+	            <?php
+	            $parent_ul = '<ul class="dropdown menu" data-dropdown-menu>%3$s</ul>';
+
+	            $nav_args = array(
+		            'theme_location' => 'header-menu',
+		            'items_wrap' => $parent_ul,
+		            'container' => '',
+		            'item_spacing' => 'discard'
+	            );
+
+	            wp_nav_menu($nav_args); ?>
+<!--                <ul class="menu vertical accordion-menu" data-accordion-menu>-->
+<!--                    <li>-->
+<!--                        <a aria-label="Close menu" class="button" data-close><em>Back</em></a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="--><?php //echo home_url(); ?><!--" class="button"><span class="fas fa-home"></span> Home</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a class="button">Products</a>-->
+<!--                        <ul class="menu vertical nested">-->
+<!--                            <li><a class="button" href="/about/frames">Frames</a></li>-->
+<!--                            <li><a class="button" href="/about/lenses">Lenses</a></li>-->
+<!--                            <li><a class="button" href="/about/optometry">Optometry</a></li>-->
+<!--                            <li><a class="button" href="/about/sunglasses">Sunglasses</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="/about" class="button">About Us</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="/contact" class="button">Contact</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="/blog" class="button">Blog</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="/collection" class="button">Collection</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
             </div>
         </div>

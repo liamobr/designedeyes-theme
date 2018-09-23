@@ -25,14 +25,14 @@ $de-grey: #D3D3D3;
 	margin-right: 10px;
 }
 
-.menu-image {
-	width: 18%;
-	min-width: 140px;
-	margin: 0 12px;
-}
+.nav-logo {
+	display: inline-block;
+    width: 18%;
+	margin: 5px 10px;
 
-.menu-image a {
-	padding: 0 !important;
+	@include breakpoint(small only){
+		width: 50px;
+	}
 }
 
 #mobile-menu ul li a{
@@ -53,6 +53,7 @@ ul.is-dropdown-submenu {
 }
 
 ul.dropdown.menu {
+  display: inline-block;
 	max-width: 75vw;
 
 	@include breakpoint(small only){
@@ -60,7 +61,9 @@ ul.dropdown.menu {
 	}
 }
 
-a.button {
+.menu-item a {
+    @include button();
+    margin: 0;
 	background-color: transparent;
 	color: black;
 	border-radius: 3px;
@@ -69,8 +72,12 @@ a.button {
 	border-bottom: 2px solid transparent;
 }
 
-a.button:hover {
+.menu-item a:hover {
 	color: black;
 	background-color: $de-blue;
 	border-bottom: 2px solid black;
+}
+
+.is-submenu-item {
+    display: block !important;
 }
