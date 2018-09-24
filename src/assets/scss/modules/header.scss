@@ -1,6 +1,10 @@
 $de-blue: #5a9ad4;
 $de-grey: #D3D3D3;
 
+ul ul, ul {
+	margin-left: 0;
+}
+
 .top-bar {
 	background-color: white;
 	background: linear-gradient(6deg, transparent 0%, transparent 80%, $de-blue 1%, $de-blue 0%),
@@ -25,18 +29,28 @@ $de-grey: #D3D3D3;
 	margin-right: 10px;
 }
 
+.top-bar-right .hide-for-large {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .nav-logo {
 	display: inline-block;
-    width: 18%;
+	width: 120px;
 	margin: 5px 10px;
 
-	@include breakpoint(small only){
-		width: 50px;
+	@include breakpoint(medium){
+		width: 160px;
 	}
 }
 
 #mobile-menu ul li a{
 	text-align: left;
+	width: 100%;
+}
+
+.drilldown .is-drilldown-submenu {
+	background: white;
 }
 
 .off-canvas {
@@ -48,12 +62,8 @@ ul.menu {
 	background-color: transparent;
 }
 
-ul.is-dropdown-submenu {
-	background: $de-grey;
-}
-
 ul.dropdown.menu {
-  display: inline-block;
+  	display: inline-block;
 	max-width: 75vw;
 
 	@include breakpoint(small only){
@@ -78,6 +88,6 @@ ul.dropdown.menu {
 	border-bottom: 2px solid black;
 }
 
-.is-submenu-item {
-    display: block !important;
+.is-dropdown-submenu-item {
+	display: block !important;
 }

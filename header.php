@@ -27,7 +27,7 @@
                         </a>
                     </div>
 	                <?php
-	                $parent_ul = '<ul class="dropdown menu show-for-medium" data-dropdown-menu>%3$s</ul>';
+	                $parent_ul = '<ul class="dropdown menu show-for-large" data-dropdown-menu>%3$s</ul>';
 
 	                $nav_args = array(
 		                'theme_location' => 'header-menu',
@@ -49,7 +49,7 @@
         <div class="off-canvas-wrapper">
             <div id="mobile-menu" class="off-canvas position-right" data-off-canvas>
 	            <?php
-	            $parent_ul = '<ul class="dropdown menu" data-dropdown-menu>%3$s</ul>';
+	            $parent_ul = '<ul class="vertical menu drilldown" data-drilldown>%3$s</ul>';
 
 	            $nav_args = array(
 		            'theme_location' => 'header-menu',
