@@ -63,10 +63,9 @@ img.alignright {
 	float: right;
 	margin: 0 0 1em 1em;
 
-	@include breakpoint(small){
+	@include breakpoint(small only){
 		float: none;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0 auto;
 	}
 }
 
@@ -74,10 +73,9 @@ img.alignleft {
 	float: left;
 	margin: 0 1em 1em 0;
 
-	@include breakpoint(small){
+	@include breakpoint(small only){
 		float: none;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0 auto;
 	}
 }
 
