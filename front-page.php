@@ -45,7 +45,6 @@
                 the_row();
 
                 $service_image = get_sub_field('service_image')['url'];
-                $service_title = get_sub_field('service_title');
                 $service_link = get_sub_field('service_link');
                 $service_description = get_sub_field('service_description');
 
@@ -61,7 +60,6 @@
                             </div>
                             <div class="columns small-12 medium-7" data-equalizer-watch>
                                 <div class="service-container">
-                                    <h4><b><?= $service_title ?></b></h4><br>
                                     <p><?= $service_description ?></p><br>
                                     <a class="button" href="<?= $service_link ?>"><i class="fas fa-mouse-pointer"></i> Read more</a>
                                 </div>
