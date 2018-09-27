@@ -27,11 +27,11 @@ $de-light-grey: #e4e4e4;
 	background-color: white;
 }
 
-.main-html {
+.main-html, .woocommerce-page,.page {
 	@extend %general;
 }
 
-.page, .blog, .woocommerce-page, .single-post {
+.blog, single-post {
 	@extend %general;
 
 	background-image: url("../images/background.jpg");
@@ -53,6 +53,11 @@ p {
     margin: 0;
 }
 
+.column .columns {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .columns:last-child:not(:first-child){
 	float: left;
 }
@@ -65,7 +70,9 @@ img.alignright {
 
 	@include breakpoint(small only){
 		float: none;
-		margin: 0 auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -75,7 +82,9 @@ img.alignleft {
 
 	@include breakpoint(small only){
 		float: none;
-		margin: 0 auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -83,6 +92,15 @@ img.aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
+}
+
+img.alignnone {
+	@include breakpoint(small only){
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .alignright { float: right; }
