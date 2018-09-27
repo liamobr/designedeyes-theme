@@ -31,7 +31,7 @@ $de-light-grey: #e4e4e4;
 	@extend %general;
 }
 
-.blog, single-post {
+.blog, .single-post {
 	@extend %general;
 
 	background-image: url("../images/background.jpg");
