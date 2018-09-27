@@ -54,6 +54,11 @@ require_once( 'library/responsive-images.php' );
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
 
+function disable_srcset( $sources ) {
+	return false;
+}
+add_filter( 'wp_calculate_image_srcset', 'disable_srcset' );
+
 //Disable default woocommerce stylesheets
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 

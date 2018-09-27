@@ -95,12 +95,6 @@ $(document).ready(function () {
                        $("#active-filters").text("Showing up to " + posts_per_page + " results");
                    }
                }
-
-               if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1)  {
-                   safariResize();
-               } else if (navigator.userAgent.indexOf('iPad') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
-                   safariResize();
-               }
            }
        });
 
@@ -110,27 +104,3 @@ $(document).ready(function () {
         console.log($(this).attr('data-brand'));
     });
 });
-
-function safariResize() {
-    console.log("Running safariResize");
-
-    // This variable starts at 1 because the logo (always on the page) is image 0
-    var loaded = 1;
-    $('img').on('load',function(){
-        loaded++;
-        let images = $('img');
-        if (loaded === $('img').length){
-            for (var i = 1; i < images.length; i++){
-                if ($(images[i]).css("object-fit") !== 'cover'){
-                    var naturalH = images[i].naturalHeight;
-                    var naturalW = images[i].naturalWidth;
-                    var ratio = naturalH / naturalW;
-                    var newRatio = (images[i].width / naturalW);
-                    var newH = naturalH * newRatio;
-                    $(images[i]).css("height", newH + "px");
-                }
-            }
-        }
-
-    });
-}
