@@ -20,15 +20,16 @@
 	<div class="row">
 				<div class="blog-content">
 					<div class="row title">
-						<div class="columns small-6 small-offset-1">
+						<div class="columns small-11 small-offset-1">
 							<header><h3 class="blog-title"><?php the_title(); ?></h3></header>
-						</div>
-						<div class="columns small-5 center-children-vertical align-right">
-							<?php the_date(); ?>
 						</div>
 					</div>
 
 					<?php the_content(); ?>
+
+                    <cite>
+                        Posted by <?php the_author_link(); ?> on <?php the_date(); ?>
+                    </cite>
 				</div>
         <?php endwhile;
     endif; ?>

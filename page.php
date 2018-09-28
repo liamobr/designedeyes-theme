@@ -20,9 +20,9 @@
                     </nav>
                 </div>
                 <header>
-                    <h2>
+                    <h1>
                         <?php the_title(); ?>
-                    </h2>
+                    </h1>
                 </header>
                 <?php the_content(); ?>
             </div>

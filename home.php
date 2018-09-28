@@ -20,7 +20,7 @@
                 while(have_posts()) : the_post(); ?>
 
                     <div class="row title">
-                        <div class="columns small-12 small-offset-1">
+                        <div class="columns small-11 small-offset-1">
                             <header>
                                 <a class="black-text" href="<?php the_permalink(); ?>"><h3 class="blog-title"><?php the_title(); ?></h3></a>
                             </header>
@@ -28,6 +28,11 @@
                     </div>
 
                     <?php the_content('Read more...'); ?>
+
+                    <cite>
+                        Posted by <?php the_author_link(); ?> on <?php the_date(); ?>
+                    </cite>
+
                     <hr>
                 <?php endwhile;
             endif; ?>
