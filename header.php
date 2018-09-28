@@ -59,34 +59,5 @@
 	            );
 
 	            wp_nav_menu($nav_args); ?>
-<!--                <ul class="menu vertical accordion-menu" data-accordion-menu>-->
-<!--                    <li>-->
-<!--                        <a aria-label="Close menu" class="button" data-close><em>Back</em></a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="--><?php //echo home_url(); ?><!--" class="button"><span class="fas fa-home"></span> Home</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a class="button">Products</a>-->
-<!--                        <ul class="menu vertical nested">-->
-<!--                            <li><a class="button" href="/about/frames">Frames</a></li>-->
-<!--                            <li><a class="button" href="/about/lenses">Lenses</a></li>-->
-<!--                            <li><a class="button" href="/about/optometry">Optometry</a></li>-->
-<!--                            <li><a class="button" href="/about/sunglasses">Sunglasses</a></li>-->
-<!--                        </ul>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/about" class="button">About Us</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/contact" class="button">Contact</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/blog" class="button">Blog</a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="/collection" class="button">Collection</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
             </div>
         </div>
