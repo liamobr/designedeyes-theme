@@ -43,7 +43,7 @@ $(document).ready(function () {
                data[name].push(form_data[i].value);
            } else {
                temp_name = name;
-               data[name] = [form_data[i].value]
+               data[name] = form_data[i].value
            }
        }
 

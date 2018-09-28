@@ -109,7 +109,9 @@ function fetch_products(){
     $query = new WP_Query($params);
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		header('Content-Type: application/json');
 		echo json_encode($query);
+		die();
 	}else{
 		return $query;
 	}
