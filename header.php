@@ -15,6 +15,17 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="<?php bloginfo('template_directory'); ?>/dist/assets/images/logo/icon.png">
+        <?php
+        if(get_field('meta_title')){
+            $content = get_field('meta_title');
+            echo '<meta name="title" content = "' . $content . '" />';
+        }
+        if(get_field('meta_description')){
+            $content = get_field('meta_description');
+            echo '<meta name="description" content="' . $content . '"/>';
+        }
+        ?>
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
