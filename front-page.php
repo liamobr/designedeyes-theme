@@ -51,7 +51,7 @@
                 ?>
 
                 <div class="row columns small-12 align-center">
-                    <div class="columns small-12 service-panel" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-offset="300">
+                    <div class="columns small-12 service-panel" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" data-aos-offset="300">
                         <div class="row" data-equalizer>
                             <div class="columns small-12 medium-5" data-equalizer-watch>
                                 <div class="service-image">
