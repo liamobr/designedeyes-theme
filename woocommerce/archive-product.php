@@ -197,7 +197,7 @@
 
                                     <div class="columns small-12">
                                         <a href="/product/<?php echo $product->get_slug(); ?>">
-                                            <?php echo $product->get_image('medium'); ?>
+                                            <?php echo $product->get_image('medium_large'); ?>
                                         </a>
                                         <hr class="show-for-medium">
                                     </div>
